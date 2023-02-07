@@ -1,0 +1,45 @@
+@keyframes inbox-in{
+  0% { transform: translate(90px, 0px) }
+  100% { transform: translate(0px, 0px) }
+}
+
+@keyframes inbox-out{
+  0% { transform: translate(0px, 0px) }
+  100% { transform: translate(90px, 0px) }
+}
+
+@keyframes task-in{
+  0% { transform: translate(180px, 0px) }
+  100% { transform: translate(0px, 0px) }
+}
+
+@keyframes task-out{
+  0% { transform: translate(0px, 0px) }
+  100% { transform: translate(180px, 0px) }
+}
+
+.animateInboxIn {
+  animation-name: inbox-in;
+  animation-duration: 500ms;
+  animation-timing-function: ease-out;
+}
+
+.animateInboxOut {
+  animation-name: inbox-out;
+  animation-duration: 500ms;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+.animateTaskIn {
+  animation-name: task-in;
+  animation-duration: 500ms;
+  animation-timing-function: ease-out;
+}
+
+.animateTaskOut {
+  animation-name: task-out;
+  animation-duration: 500ms;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
