@@ -1,25 +1,21 @@
 import React, { useContext } from 'react'
 import {
   QuickActionType,
-  QuickDispatchContext,
-  QuickStatesContext
+  QuickDispatchContext
 } from '../../context/QuickContext'
 import CircleButton from '../../../ui/CircleButton'
 import { QIInbox } from '../../../ui/QuicksIcons'
 
-export default function InboxButtonSecondary(): JSX.Element {
-  const quicksStates = useContext(QuickStatesContext)
+type IProps = {
+  label?: boolean
+}
+
+export default function InboxButtonSecondary(props: IProps): JSX.Element {
   const dispatchQuicksStates = useContext(QuickDispatchContext)
 
   return (
-    <div
-      className="relative"
-      // className={
-      //   'relative ' +
-      //   (quicksStates.quick ? 'animateInboxIn' : 'animateInboxOut')
-      // }
-    >
-      {quicksStates.quick && (
+    <div className="relative">
+      {props.label && (
         <label className="absolute top-[-30px] right-0 left-0 leading-4 text-white text-center">
           Inbox
         </label>

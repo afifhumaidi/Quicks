@@ -29,7 +29,6 @@ describe('Testing QuickMenu Component', () => {
     )
 
     fireEvent.click(screen.getByRole('button', { name: 'quick' }))
-    fireEvent.click(screen.getByRole('button', { name: 'quick' }))
 
     screen.getByRole('button', { name: 'inbox' })
     screen.getByRole('button', { name: 'task' })

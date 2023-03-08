@@ -3,11 +3,7 @@ import { QuickActionType, QuickDispatchContext } from '../../context/QuickContex
 import CircleButton from '../../../ui/CircleButton'
 import { QIInbox } from '../../../ui/QuicksIcons'
 
-type IProps = {
-  resetFirstRender: () => void
-}
-
-export default function InboxButtonPrimary({ resetFirstRender }: IProps): JSX.Element {
+export default function InboxButtonPrimary(): JSX.Element {
   const dispatchQuicksStates = useContext(QuickDispatchContext)
 
   return (
@@ -15,14 +11,15 @@ export default function InboxButtonPrimary({ resetFirstRender }: IProps): JSX.El
       <CircleButton
         size="68"
         className="absolute top-0 right-[15px] bg-[#4F4F4F]"
+        ariaLabel='Close inbox'
         onClick={() => {
           dispatchQuicksStates({ type: QuickActionType.RESET })
-          resetFirstRender()
         }}
       />
       <CircleButton
         size="68"
         className="relative ml-[15px] bg-[#8785FF] cursor-auto"
+        tabIndex={-1}
       >
         <QIInbox />
       </CircleButton>

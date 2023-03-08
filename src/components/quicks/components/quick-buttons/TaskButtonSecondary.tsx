@@ -1,25 +1,21 @@
 import React, { useContext } from 'react'
 import {
   QuickActionType,
-  QuickDispatchContext,
-  QuickStatesContext
+  QuickDispatchContext
 } from '../../context/QuickContext'
 import CircleButton from '../../../ui/CircleButton'
 import { QITask } from '../../../ui/QuicksIcons'
 
-export default function TaskButtonSecondary(): JSX.Element {
-  const quicksStates = useContext(QuickStatesContext)
+type IProps = {
+  label?: boolean
+}
+
+export default function TaskButtonSecondary(props: IProps): JSX.Element {
   const dispatchQuicksStates = useContext(QuickDispatchContext)
 
   return (
-    <div
-      className="relative"
-      // className={
-      //   'relative ' +
-      //   (quicksStates.quick ? 'animateTaskIn' : 'animateTaskOut')
-      // }
-    >
-      {quicksStates.quick && (
+    <div className="relative">
+      {props.label && (
         <label className="absolute top-[-30px] right-0 left-0 leading-4 text-white text-center">
           Task
         </label>

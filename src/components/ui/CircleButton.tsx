@@ -1,14 +1,15 @@
 import React from 'react'
 
-interface PropType {
+interface IProps {
   size: string
   className?: string
   ariaLabel?: string
   children?: JSX.Element | string
+  tabIndex?: number
   onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void
 }
 
-export default function CircleButton(props: PropType): JSX.Element {
+export default function CircleButton(props: IProps): JSX.Element {
   const style = {
     width: `${props.size}px`,
     height: `${props.size}px`
@@ -19,6 +20,7 @@ export default function CircleButton(props: PropType): JSX.Element {
       style={style}
       role="button"
       aria-label={props.ariaLabel}
+      tabIndex={props.tabIndex}
       className={`grid place-items-center rounded-full ${props.className}`}
       onClick={props.onClick}
     >
