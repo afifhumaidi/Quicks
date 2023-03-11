@@ -1,8 +1,7 @@
 import React from 'react'
-import '../assets/css/QuickMenu.css'
-import QuickMenuPrimary from './quick-buttons/QuickMenuPrimary'
-import QuickMenuSecondary from './quick-buttons/QuickMenuSecondary'
-import QuickMenuTertiary from './quick-buttons/QuickMenuTertiary '
+import QuickMenuPrimary from './QuickMenuPrimary'
+import QuickMenuSecondary from './QuickMenuSecondary'
+import QuickMenuTertiary from './QuickMenuTertiary '
 
 export default function QuickMenu(): JSX.Element {
   return (

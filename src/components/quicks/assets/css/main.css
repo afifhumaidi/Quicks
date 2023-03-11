@@ -1,0 +1,25 @@
+/* Font */
+@font-face {
+  font-family: Lato;
+  src: url(../fonts/Lato/Lato-Regular.ttf);
+}
+
+@font-face {
+  font-family: Lato;
+  src: url(../fonts/Lato/Lato-Bold.ttf);
+  font-weight: bold;
+}
+
+#quick {
+  font-family: Lato, sans-serif;
+}
+
+/* Scroll Bar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #BDBDBD; 
+  border-radius: 8px;
+}

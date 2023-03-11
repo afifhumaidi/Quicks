@@ -1,5 +1,5 @@
 import React from 'react'
-import Quick from '../components/quicks'
+import Quick from '../components/Quicks'
 
 export default function Home(): JSX.Element {
   return (
